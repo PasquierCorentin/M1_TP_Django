@@ -1,0 +1,18 @@
+{% extends 'todo/base.html' %}
+
+
+{% block content %}
+<section class="jumbotron text-center">
+    <div class="container">
+      <h1>TODO List</h1>
+      <h2> Update a Todo</h2>
+      <form method="POST" action="" role='form'>
+        {% csrf_token %}
+        {{form}}
+        <input class="add btn btn-primary font-weight-bold todo-list-add-btn" type="submit" name="Update Todo"
+            value="Update">
+    </form>
+</section>
+
+
+{% endblock %}
